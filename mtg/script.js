@@ -7,7 +7,7 @@ const sleep = (ms) => new Promise(res => setTimeout(res, ms));
 
 btn.addEventListener('click', async () => {
   const raw = input.value || '';
-  const names = raw.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+  const names = raw.split(/\r?\n/).map(s => s.trim()).filter(Boolean).map(line => line.replace(/^\d+\s+/, ''));
 
   if (names.length === 0) {
     output.textContent = 'Please enter one or more card names (one per line).';
