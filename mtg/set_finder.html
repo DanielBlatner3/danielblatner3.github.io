@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MTG Card Print Sets — Scryfall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>MTG Print Sets</h1>
+
+    <label for="cards">Paste card names (one per line)</label>
+    <textarea id="cards" placeholder="Ingot Chewer 
+Kibo, Uktabi Prince
+Asmoranomardicadaistinaculdacar
+    "></textarea>
+
+    <div class="controls">
+      <button id="run" class="btn">Fetch Sets</button>
+    </div>
+
+    <div class="row small hint" id="tip">
+      EXACT MATCHING IS USED, CHECK SPELLING
+    </div>
+
+    <label for="output" class="mt">Output</label>
+    <pre id="output" aria-live="polite"></pre>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
